@@ -67,7 +67,7 @@ func rabbitConnector(uri string) {
 		rabbitChan, err = rabbitConn.Channel()
 		failOnError(err, "Failed to create channel")
 
-		// create exchange
+		// create exchang
 		err = rabbitChan.ExchangeDeclare("robot-shop", "direct", true, false, false, false, nil)
 		failOnError(err, "Failed to create exchange")
 
